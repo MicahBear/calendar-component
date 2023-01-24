@@ -1,6 +1,6 @@
 # Calendar Component
 
-Building out a resuseable calendar component for react apps down the road.
+Building out a reusable calendar component for react apps down the road.
 
 ## Tech stack
 
