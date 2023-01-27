@@ -8,7 +8,7 @@ export default [
         "id": 2,
         "title": "basil",
         "maturity": 74,
-        "seed": 6
+        "start": 6
     },
     {
         "id": 3,
