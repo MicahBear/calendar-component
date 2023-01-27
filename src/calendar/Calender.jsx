@@ -5,8 +5,16 @@ import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import { DateTime } from "luxon";
 
 export default function Calendar() {
+  const frostDate = "2023-04-11";
+  console.log(frostDate);
+  let dt = DateTime.fromObject({ year: 2023, month: 4, day: 11 })
+    .minus({ days: 35 })
+    .toISODate();
+  // dt.minus({ days: 35 });
+  console.log(dt, "check");
   const [currentEvents, setCurrentEvents] = useState([]);
 
   const handleDateClick = (selected) => {
@@ -49,7 +57,7 @@ export default function Calendar() {
         select={handleDateClick}
         eventClick={handleEventClick}
         eventsSet={(events) => setCurrentEvents(events)}
-        initialEvents={[]}
+        initialEvents={[{ id: "1a", title: "seed spinach", date: dt }]}
       />
     </div>
   );
