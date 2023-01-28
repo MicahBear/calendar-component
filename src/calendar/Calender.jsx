@@ -11,7 +11,7 @@ export default function Calendar() {
   const frostDate = "2023-04-11";
   console.log(frostDate);
   let dt = DateTime.fromObject({ year: 2023, month: 4, day: 11 })
-    .minus({ days: 35 })
+    .minus({ days: 75 })
     .toISODate();
   // dt.minus({ days: 35 });
   console.log(dt, "check");
@@ -42,8 +42,9 @@ export default function Calendar() {
     }
   };
   return (
-    <div className="">
+    <div className="calendar--container">
       <FullCalendar
+        height="25vh"
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
         headerToolbar={{
           left: "prev,next today",
@@ -57,7 +58,11 @@ export default function Calendar() {
         select={handleDateClick}
         eventClick={handleEventClick}
         eventsSet={(events) => setCurrentEvents(events)}
-        initialEvents={[{ id: "1a", title: "seed spinach", date: dt }]}
+        initialEvents={[
+          { id: "1ss", title: "seed spinach", date: dt },
+          { id: "2sl", title: "seed lettuce", date: "2023-01-23" },
+          { id: "3hk", title: "harvest kale", date: "2023-01-28" },
+        ]}
       />
     </div>
   );
