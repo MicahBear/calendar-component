@@ -7,7 +7,6 @@ Building out a reusable calendar component for react apps down the road.
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Tech stack](#tech-stack)
-  - [Continued development](#continued-development)
 
 ## Overview
 
